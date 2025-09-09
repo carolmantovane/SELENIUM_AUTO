@@ -13,9 +13,13 @@ navegador.maximize_window()
 navegador.get("https://www.python.org/")
 
 # SELECIONAR UM ELEMENTO DO SITE
-botao_menu = navegador.find_element("class name", "menu-button")
+lista_botoes = navegador.find_elements("class name", "button")
 
-# CLICAR NO ELEMENTO
-botao_menu.click()
+for botao in lista_botoes:
+    if "Become a Member" in botao.text:
+        botao.click()
+        break
+
+
 
 time.sleep(10)
