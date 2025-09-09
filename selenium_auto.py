@@ -20,6 +20,13 @@ for botao in lista_botoes:
         botao.click()
         break
 
+# SELECIONAR UMA ABA
+abas = navegador.window_handles
+navegador.switch_to.window(abas[1])
+
+# NAVEGAR PARA UM SITE DIFERENTE
+navegador.get("https://www.python.org/community/")
+
 
 
 time.sleep(10)
